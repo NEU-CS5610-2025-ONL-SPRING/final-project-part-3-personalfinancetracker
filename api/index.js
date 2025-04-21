@@ -34,7 +34,7 @@ app.post('/add-items', requireAuth, createItem);
 app.get('/categories', requireAuth,getCategories);
 app.delete('/delete-items/:id', requireAuth,deleteItems);
 
-const PORT = process.env.PORT || 4000;
+const PORT = parseInt(process.env.PORT) || 8080;
 app.listen(PORT, () => {
-  console.log(`API server running on port ${PORT}`);
+console.log(`Server running on http://localhost:${PORT} 🎉 🚀`);
 });
